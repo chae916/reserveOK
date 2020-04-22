@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: reserveok 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: reserveok 
+    spec:
+      containers:
+        - name: reserveok 
+          image: admin16acr.azurecr.io/reserveok
+          ports:
+          - containerPort: 8080
